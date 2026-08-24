@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Question 1</h1>
+
+    <p>What is a parallelogram?</p>
+
+    <button onclick="answer('A')">A. A quadrilateral with no equal sides</button>
+    <button onclick="answer('B')">B. A quadrilateral with two pairs of parallel sides</button>
+    <button onclick="answer('C')">C. A triangle with two equal sides</button>
+    <button onclick="answer('D')">D. A shape with four right angles only</button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+function answer(choice) {
+
+    let result = document.getElementById("result");
+
+    if (choice === "A") {
+        result.innerHTML = "Not quite! A parallelogram has two pairs of parallel sides.";
+    }
+    else if (choice === "B") {
+        result.innerHTML = "Correct! That is the defining property of a parallelogram.";
+    }
+    else if (choice === "C") {
+        result.innerHTML = "Nope! A triangle has only three sides.";
+    }
+    else {
+        result.innerHTML = "Not exactly! A rectangle has four right angles, but not every parallelogram does.";
+    }
+}
+</script>
+
+</body>
+</html>
